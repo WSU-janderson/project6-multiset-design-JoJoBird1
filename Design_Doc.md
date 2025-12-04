@@ -21,3 +21,5 @@ The clients for the MultiSet class would be the inventory, crafting, loot system
 * merger(other)
 
 Meanwhile the user side that has access to the MultiSet class is me, and any collaborating developers working on the systems to interact with the MultiSet.
+
+## Core Operations
