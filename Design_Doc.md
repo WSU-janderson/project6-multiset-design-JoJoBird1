@@ -55,3 +55,21 @@ This set-like operation would be used to find items that appear in both MultiSet
 The extension feature I would us for the MultiSet is top_k(k) operation, which returns the k most frequent items. This will enhance the gameplay interface for the player because this operation could be used to display what materials the player tends to hoard the most. 
 
 ## UML Diagram
+
+```mermaid
+classDiagram
+class MultiSet {
+    -elements: Sequence(<string>)
+
+    + add(item: string): void
+    + remove(item: string): bool
+    + count(item: string):
+    + contains(item: string): bool
+    + size():
+
+    + union_with(other: MulitSet): MultiSet
+    + intersection_with(other: MultiSet): MultiSet
+    + top_k(k): Sequence(<string>)
+}
+```
+
