@@ -50,3 +50,8 @@ This set-like operation would combine the items of two inventories, this typical
 
 ### intersection_with()
 This set-like operation would be used to find items that appear in both MultiSets, this typically happens when multiple players are sharing the same crafting materials, or the loot items from a defeated monster need to be shown to multiple players. Intersection_with() would store each occurrence on an element as its own entry in the Sequence(<string>) by scanning the Sequence element by element to check if the MultiSet contains a matching occurrence, then checks the second list exactly the same way, and if a match is found it will append it to a new Sequence. The conceptual time complexity for intersection_with() would be O(m x n). Some edge cases would be is the items appear in one set but not the other, identifying case-sensitivity, or if either MultiSet is empty.
+
+## Extension Feature
+The extension feature I would us for the MultiSet is top_k(k) operation, which returns the k most frequent items. This will enhance the gameplay interface for the player because this operation could be used to display what materials the player tends to hoard the most. 
+
+## UML Diagram
