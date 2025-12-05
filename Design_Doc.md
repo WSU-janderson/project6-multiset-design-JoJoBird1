@@ -18,8 +18,19 @@ The clients for the MultiSet class would be the inventory, crafting, loot system
 * add(item)
 * remove(item)
 * count(item)
-* merger(other)
 
 Meanwhile the user side that has access to the MultiSet class is me, and any collaborating developers working on the systems to interact with the MultiSet.
 
 ## Core Operations
+
+For this MultiSet it will be supporting some essential operations that store, modify, or retrieve items that occur multiple times. Each copy of an item is stored as its own element within the dynamic list in the Sequence(<string>) data structure. The five core operations are add, remove, count, contains, and size.
+
+The operation add has the conceptual behavior of increasing one occurrence of a given item in MultiSet. This will help when the player picks up a new item or when the player receives loot from a defeated enemy. The time complexity would be O(1), the item would be appended to the end of the item list. There are some edge cases such as large amounts of adds that may trigger the resizing. 
+
+The operation remove has a conceptual behavior of deleting one occurrence of the given item in the MultiSet. This will help when the player uses an item such as using a potion or shooting an arrow, or when the player discards/drops and item. The time complexity would be O(n) due to the linear searching, however in the Sequence data structure it is scanned from the front of the list meaning the first matching item/element will be deleted. The edge cases are if the item doesn't particularly exist which could perform no action of break the system if not handled, and another edge case would be deleting from an empty MultiSet.
+
+The operation count has a conceptual behavior of returning the number of times an item appears in the MultiSet. The entire list will be scanned and the counter would increment for each time the same matching items shows up. The time complexity would be O(n) for all the items being checked through scanning. Some edge cases would be that some items may not appear resulting in a count of zero. 
+
+The operation contains has a conceptual behavior of checking the MultiSet for at least one instance of the item. This is done during crafting potions, the player will need certain ingredients to craft a potion and the contains will check that the player has those ingredients. The Sequence data structure behavior is scan a list until a match is located. The time complexity would be O(1) if the ingredient items are found earlier in the list, and O(n) if the ingredient items are farther down the list. Some edge cases of concern would be an empty MultiSet will always return false, and case-sensitive comparisons.
+
+The operation size has a conceptual behavior of returning the total number of elements in the MultiSet, which include duplicates.The Sequence data structure does track its own size. The time complexity would be O(n) if Sequence doesn't maintain internal size O(1). An edge case would be if the MultiSet is empty.
