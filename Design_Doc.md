@@ -125,3 +125,4 @@ Designing the MultiSet atop of Sequence(<string>) data structure allows me to ma
 ## Sources
 B Lokeshwar, et al. "Analysis of Time and Space Complexity of Array, Linked List and Linked Array(hybrid) in Linear Search Operations". IEEE. 2022 International CConference on Data Science, Agents & Artificial Intelligence. 2022. pp 1 - 6. doi: 10.1109/ICDSAAI55433.2022.10028872. [link](https://ieeexplore-ieee-org.ezproxy.libraries.wright.edu/document/10028872)
 
+Beatrice Akerblom, et al. "Arrays in Practice: An Empirical study of Array Access Patterns on the JVM". arXiv preprint. 2024. ariXv.2403.02416v1. [link] (https://arxiv.org/pdf/2403.02416)
