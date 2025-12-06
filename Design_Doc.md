@@ -87,10 +87,20 @@ HashTable offers faster performance for lookup operations especially with larger
 | Implementation Complexity | very low | medium-high |
 | Best Use Case | small to medium collections | large collections |
 
-
-
+I didn't choose HashTable because I wanted a level of transparency, and ease of implementation for a simple structural foundation.
 
 ## Alternative Design Sketch
+Below is a side-by-side comparison how the design would differ. 
+
+| Design Aspect | Sequence | HashTable |
+| --- | --- | --- |
+|Internal | Stores each occurrence as a separate string in a dynamic list | Stores one key per unique item within an integer count |
+| Conceptual Model | Mirrors a bag of items | Requires mapping key to counts/pairs |
+| Add Operation | appends new string | increments the count in HashTable |
+| Remove Operation | linear search to find matching item and delete it | Decrement the count or simply erase the key |
+| Count | Does require scanning | Constant time lookup |
+
+If I changed the design over to HashTable the contains, count, and remove operations would have a faster performance. The downside would be more of an abstract internal structure making it a little less predictable than Sequence. 
 
 ## Evaluation Plan
 
