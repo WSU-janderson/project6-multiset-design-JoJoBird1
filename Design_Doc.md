@@ -73,3 +73,6 @@ class MultiSet {
 }
 ```
 
+The core operations along with the extension feature for the MultiSet define behaviors that the external game systems relies on. If these operations were private then it could prevent the system from simply adding and could cause the MultiSet to error. 
+
+## Trade-off Analysis
