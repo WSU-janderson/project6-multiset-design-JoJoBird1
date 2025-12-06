@@ -123,3 +123,5 @@ I would focus on timing test for core operations as the MultiSet grows, and to r
 Designing the MultiSet atop of Sequence(<string>) data structure allows me to maintain clarity, and predictable behavior. Although there were other data structures that I had to consider, HashTable and AVLTree, which provided more efficient removals, lookups, and their complexities to handle large lists. I decided to stick with Sequence because it is beginner friendly making it easy to understand for software developers to detect any bugs, and to add more operations further down the road.
 
 ## Sources
+B Lokeshwar, et al. "Analysis of Time and Space Complexity of Array, Linked List and Linked Array(hybrid) in Linear Search Operations". IEEE. 2022 International CConference on Data Science, Agents & Artificial Intelligence. 2022. pp 1 - 6. doi: 10.1109/ICDSAAI55433.2022.10028872. [link](https://ieeexplore-ieee-org.ezproxy.libraries.wright.edu/document/10028872)
+
