@@ -103,8 +103,23 @@ Below is a side-by-side comparison how the design would differ.
 If I changed the design over to HashTable the contains, count, and remove operations would have a faster performance. The downside would be more of an abstract internal structure making it a little less predictable than Sequence. 
 
 ## Evaluation Plan
+My plan would include functional testing, edge-case testing, and performance. These testing method will provide evidence that the MultiSet behaves correctly, scales appropriately, or if further debugging is needed. 
+
+### Functional Testing
+With the core operations tests to ensure that items will be appended correctly, removed if used, the returned count matches the actual number of occurrences, testing cases in contains if the items exists, or do not exists, size comparison against the manual count. With set operations the validation that every item from both MultiSets appears in the result with union_with(). 
+
+### Edge Case Testing
+Testing for any unusual or boundary conditions which would include:
+* Empty MultiSets for all operations
+* Removing non-existent items
+* Handling large inventories
+* Case sensitivity behavior
+* How repeated matching items in irregular order are handled
+
+### Performance Testing
+I would focus on timing test for core operations as the MultiSet grows, and to rapidly test insert, remove of items to ensure no break of performance.
 
 ## Conclusion
-
+Designing the MultiSet atop of Sequence(<string>) 
 
 ## Sources
