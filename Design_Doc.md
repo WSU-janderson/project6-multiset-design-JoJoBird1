@@ -80,6 +80,13 @@ My chosen base data structure is Sequence(<string>), the alternative that I will
 
 HashTable offers faster performance for lookup operations especially with larger lists. However it requires complex implementation making it a little difficult to follow along and easily to make an error. In the table below shows the trade-offs between Sequence vs HashTable.
 
+| Criterion | Sequence <string> | HashTable <string, unsigned int> |
+| --- | ---| ---|
+| Traversal Order | Preserved | Arbitrary |
+| Space Overhead | low (stores raw duplicates) | high (bucket, hashing metadata) |
+| Implementation Complexity | very low | medium-high |
+| Best Use Case | small to medium collections | large collections |
+
 
 
 
