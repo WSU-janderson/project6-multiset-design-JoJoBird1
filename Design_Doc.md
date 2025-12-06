@@ -120,6 +120,6 @@ Testing for any unusual or boundary conditions which would include:
 I would focus on timing test for core operations as the MultiSet grows, and to rapidly test insert, remove of items to ensure no break of performance.
 
 ## Conclusion
-Designing the MultiSet atop of Sequence(<string>) 
+Designing the MultiSet atop of Sequence(<string>) data structure allows me to maintain clarity, and predictable behavior. Although there were other data structures that I had to consider, HashTable and AVLTree, which provided more efficient removals, lookups, and their complexities to handle large lists. I decided to stick with Sequence because it is beginner friendly making it easy to understand for software developers to detect any bugs, and to add more operations further down the road.
 
 ## Sources
