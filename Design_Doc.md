@@ -76,3 +76,18 @@ class MultiSet {
 The core operations along with the extension feature for the MultiSet define behaviors that the external game systems relies on. If these operations were private then it could prevent the system from simply adding and could cause the MultiSet to error. 
 
 ## Trade-off Analysis
+My chosen base data structure is Sequence(<string>), the alternative that I will be comparing this to is HashTable(<string, unsigned int>). 
+
+HashTable offers faster performance for lookup operations especially with larger lists. However it requires complex implementation making it a little difficult to follow along and easily to make an error. In the table below shows the trade-offs between Sequence vs HashTable.
+
+
+
+
+## Alternative Design Sketch
+
+## Evaluation Plan
+
+## Conclusion
+
+
+## Sources
